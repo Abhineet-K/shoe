@@ -10,4 +10,4 @@ export const geo_api_options = {
 // http://geodb-free-service.wirefreethought.com/v1/geo/places?minPopulation=1000000&namePrefix=delhi&types=CITY&hateoasMode=false&limit=5&offset=0&sort=name
 
 export const weather_api_url = "https://api.openweathermap.org/data/2.5";
-export const weather_api_key = "3aa793c0a2000239eeaa25501168028a";
+// export const weather_api_key = "";
