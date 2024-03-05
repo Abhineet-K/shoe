@@ -1,7 +1,7 @@
 import './App.css';
 import Search from './components/search/search';
 import CurrentWeather from './components/search/current-weather/current-weather';
-import { weather_api_url} from './api';
+import { weather_api_url } from './api';
 import { useState } from 'react';
 import Forecast from './components/search/forecast/forecast';
 
@@ -10,7 +10,7 @@ function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setforecast] = useState(null);
   const api_key = process.env.REACT_APP_API_KEY;
-  
+
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
@@ -32,10 +32,12 @@ function App() {
   console.log(forecast);
 
   return (
-    <div className="container">
-      <Search onSearchchange={handleOnSearchChange} />
-      {currentWeather && <CurrentWeather data={currentWeather} />}
-      {forecast && <Forecast data =  {forecast} />}
+    <div className='main-frame'>
+      <div className="container">
+        <Search onSearchchange={handleOnSearchChange} />
+        {currentWeather && <CurrentWeather data={currentWeather} />}
+        {forecast && <Forecast data={forecast} />}
+      </div>
     </div>
   );
 }

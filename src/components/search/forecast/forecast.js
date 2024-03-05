@@ -17,7 +17,7 @@ const Forecast = ({ data }) => {
 
     return (
         <>
-            <label className="title">Daily</label>
+            <label className="title">Up Comming Days</label>
             <Accordion allowZeroExpanded>
                 {data.list.splice(0, 7).map((item, idx) => (
                     <AccordionItem key={idx}>
@@ -31,7 +31,8 @@ const Forecast = ({ data }) => {
                                 </div>
                             </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
+
+                        <AccordionItemPanel >
                             <div className="daily-details-grid">
                                 <div className="daily-details-grid-item">
                                     <label>Pressure</label>
@@ -43,7 +44,7 @@ const Forecast = ({ data }) => {
                                 </div>
                                 <div className="daily-details-grid-item">
                                     <label>Clouds</label>
-                                    <label>{item.clouds.all}%</label>
+                                    <label>{item.clouds.all} %</label>
                                 </div>
                                 <div className="daily-details-grid-item">
                                     <label>Wind Speed</label>
@@ -51,7 +52,7 @@ const Forecast = ({ data }) => {
                                 </div>
                                 <div className="daily-details-grid-item">
                                     <label>Sea level</label>
-                                    <label>{item.main.sea_level}m</label>
+                                    <label>{item.main.sea_level} m</label>
                                 </div>
                                 <div className="daily-details-grid-item">
                                     <label>Feels Like</label>
@@ -59,6 +60,7 @@ const Forecast = ({ data }) => {
                                 </div>
                             </div>
                         </AccordionItemPanel>
+
                     </AccordionItem>
                 ))}
             </Accordion>

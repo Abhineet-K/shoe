@@ -1,11 +1,15 @@
 .weather {
-    width: 300px;
+    width: 600px;
+    height: 250px;
     border-radius: 6px;
     box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
     color: #fff;
     background-color: #333;
-    margin: 20px auto 0 auto;
-    padding: 0 20px 20px 20px;
+    margin: 20px auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .top,
@@ -13,6 +17,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
 }
 
 .city {
@@ -43,7 +52,8 @@
 }
 
 .details {
-    width: 100%;
+    font-size: 24px;
+    width: 40%;
     padding-left: 20px;
 }
 
@@ -66,4 +76,44 @@
 
 .parameter-label-top {
     font-weight: 600;
+}
+
+
+/* For Tablets Screens */
+@media only screen and (max-width: 850px) {
+
+    .weather {
+        width: calc(100% - 20%);
+        height: calc(100% - 10%);
+    }
+
+    .temprature {
+        font-size: 60px;
+        letter-spacing: -1px;
+    }
+
+    .details {
+        font-size: 18px;
+    }
+
+}
+
+
+/* For Mobiles Screens */
+@media only screen and (max-width: 430px) {
+
+    .details {
+        font-size: 14px;
+    }
+
+    .parameter-label,
+    .parameter-value {
+        font-size: 10px;
+    }
+
+    .temprature {
+        font-size: 50px;
+        letter-spacing: -1px;
+    }
+
 }

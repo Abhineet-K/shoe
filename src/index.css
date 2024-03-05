@@ -1,12 +1,20 @@
 body {
-  margin: 0;
-  font-family: "Roboto" , Arial !important;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto", Arial !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: silver;
+  background: linear-gradient(rgba(242, 249, 251, 0.933), rgba(20, 201, 247, 0.946));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 12px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
